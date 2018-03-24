@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Social Fun Times';
+  events = ['event1', 'event2', 'event3', 'event4']
 }

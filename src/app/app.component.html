@@ -7,7 +7,7 @@
   <button>Recommend</button>
   <ul>
     <!-- Retrieve n events from database -->
-    <li *ngFor="let event of ['event1', 'event2', 'event3']">
+    <li *ngFor="let event of events">
       {{ event }} <button class="upvote">😀</button><button class="downvote">💩</button>
     </li>
   </ul>
