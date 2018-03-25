@@ -1,14 +1,20 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div class="wrapper">
+<div class="container">
   <h1>
     {{ title }}
   </h1>
-  <input type="text" placeholder="Event description">
+  <input type="text" placeholder="Enter a place to meet">
   <button>Recommend</button>
-  <ul>
-    <!-- Retrieve n events from database -->
-    <li *ngFor="let event of events">
-      {{ event }} <button class="upvote">😀</button><button class="downvote">💩</button>
-    </li>
-  </ul>
+  <table class="eventlist" *ngFor="let event of events">
+    <tbody>
+      <tr class="event">
+        <td class="rank">{{ event.votes }}</td>
+        <td class="vote"><button>^</button></td>
+        <td class="title">{{ event.name }}</td>
+      </tr>
+      <tr class="event">
+        <td class="subtext">{{ event.location }}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
